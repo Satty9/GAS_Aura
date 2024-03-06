@@ -23,4 +23,7 @@ public:
 	virtual void UnHighlightActor() override;
 	// IEnemyInterface end
 
+protected:
+	virtual void BeginPlay() override;
+
 };

@@ -38,3 +38,11 @@ void AAuraEnemyCharacter::UnHighlightActor()
 		GetMesh()->SetRenderCustomDepth(false);
 	}
 }
+
+void AAuraEnemyCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	
+	check(AbilitySystemComponent);
+	AbilitySystemComponent->InitAbilityActorInfo(this, this);
+}
