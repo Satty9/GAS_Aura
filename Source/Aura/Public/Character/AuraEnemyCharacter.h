@@ -21,6 +21,6 @@ public:
 	// IEnemyInterface
 	virtual void HighlightActor() override;
 	virtual void UnHighlightActor() override;
-
+	// IEnemyInterface end
 
 };
