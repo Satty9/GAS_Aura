@@ -36,6 +36,8 @@ protected:
 
 	UPROPERTY()
 	TObjectPtr<UAuraAttributeSet> AttributeSet;
-public:	
 
+	virtual void InitAbilityActorInfo() ;
+
+	
 };
