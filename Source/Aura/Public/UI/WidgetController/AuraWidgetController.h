@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "AuraWidgetController.generated.h"
 
 class UAttributeSet;
@@ -23,7 +22,7 @@ protected:
 	TObjectPtr<APlayerState> PlayerState;
 
 	UPROPERTY(BlueprintReadOnly, Category = "Widget Controller")
-	TObjectPtr<<UAbilitySystemComponent> AbilitySystemComp;
+	TObjectPtr<UAbilitySystemComponent> AbilitySystemComp;
 
 	UPROPERTY(BlueprintReadOnly, Category = "Widget Controller")
 	TObjectPtr<UAttributeSet> AttributeSet;
