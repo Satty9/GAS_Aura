@@ -35,6 +35,6 @@ private:
 	void Move(const FInputActionValue& InputActionValue); // we cant forwad declare the reference, so we use keyword "struct" to use forward declaretion
 
 	void CursorTrace();
-	IEnemyInterface* LastActor;
-	IEnemyInterface* ThisActor;
+	TObjectPtr<IEnemyInterface> LastActor;
+	TObjectPtr<IEnemyInterface> ThisActor;
 };

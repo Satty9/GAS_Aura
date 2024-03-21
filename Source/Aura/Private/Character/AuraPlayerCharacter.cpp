@@ -7,7 +7,10 @@
 #include "AbilitySystem/AuraAbilitySystemComponent.h"
 #include "AbilitySystem/AuraAttributeSet.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Player/AuraPlayerController.h"
 #include "Player/AuraPlayerState.h"
+#include "UI/HUD/AuraHUD.h"
+#include "UI/WidgetController/AuraWidgetController.h"
 
 AAuraPlayerCharacter::AAuraPlayerCharacter()
 {
@@ -47,4 +50,15 @@ void AAuraPlayerCharacter::InitAbilityActorInfo()
 	// Set pointers to objects in Player State
 	AbilitySystemComponent =  CastChecked<UAuraAbilitySystemComponent>(AuraPlayerState->GetAbilitySystemComponent());
 	AttributeSet =  CastChecked<UAuraAttributeSet>(AuraPlayerState->GetAttributeSet());
+
+	if (AAuraPlayerController* AuraPlayerController = Cast<AAuraPlayerController>(GetController()))
+	{
+		if(AAuraHUD* AuraHUD = Cast<AAuraHUD>(AuraPlayerController->GetHUD()))
+		{
+			// TODO: make data class for FWidgetControllerParams to cut dependensies to AuraWidgetController;
+			FWidgetControllerParams WCParams (AuraPlayerController, AuraPlayerState, AbilitySystemComponent, AttributeSet);
+			AuraHUD->InitOverlay(WCParams);
+		}
+	}
+	
 }
