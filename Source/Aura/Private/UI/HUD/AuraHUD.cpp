@@ -31,7 +31,7 @@ void AAuraHUD::InitOverlay(FWidgetControllerParams WidgetControllerParams)
 	// Create Overlay Widget Controller
 	UOverlayWidgetController* OverlayWidgetControllerLocal = GetOverlayWidgetController(WidgetControllerParams);
 	OverlayWidget->SetWidgetController(OverlayWidgetControllerLocal);
-	 
+	OverlayWidgetController->BroadcastInitialValues();
 	Widget->AddToViewport();
 }
 
