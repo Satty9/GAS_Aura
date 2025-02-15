@@ -100,3 +100,4 @@ Build/Android/res/*
 !Build/Android/res/*/
 Build/Android/res/*/*
 !Build/Android/res/*/*.png
+Aura.sln.DotSettings.user
