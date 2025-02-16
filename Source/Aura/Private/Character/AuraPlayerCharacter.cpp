@@ -60,5 +60,6 @@ void AAuraPlayerCharacter::InitAbilityActorInfo()
 			AuraHUD->InitOverlay(WCParams);
 		}
 	}
-	
+
+	InitializePrimaryAttributes();
 }
